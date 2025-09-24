@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Detalhes Volkswagen Golf - Ribeiro Multimarcas</title>
+  <title>Detalhes Volkswagen Golf - Priscila Veiculos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     /* Reset básico */
     * {
@@ -12,18 +16,18 @@
       box-sizing: border-box;
     }
 
-    /* Nova paleta de cores: Dourado + Preto */
+    /* Paleta de cores: Preto Absoluto + Rosa Fúcsia */
     :root {
-      --dourado-metalico: #FFD700;    /* Principal: destaque e elegância */
-      --dourado-escuro: #B8860B;      /* Profundidade e variação */
-      --preto-profundo: #0A0A0A;      /* Fundo e contraste */
-      --cinza-grafite: #2E2E2E;       /* Detalhes discretos */
-      --branco: #FFFFFF;              /* Equilíbrio e legibilidade */
+      --preto-absoluto: #000000;
+      --rosa-fucsia: #e91e63;
+      --rosa-claro: #f8bbd9;
+      --cinza-medio: #444444;
+      --branco: #ffffff;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--preto-profundo); /* Base preta */
+      font-family: 'Montserrat', sans-serif; /* Corpo: Montserrat para modernidade e legibilidade */
+      background-color: var(--preto-absoluto); /* Base preta absoluta */
       color: var(--branco); /* Textos principais em branco para contraste */
       line-height: 1.6;
       min-height: 100vh;
@@ -34,46 +38,45 @@
     a {
       color: var(--branco);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
     a:hover {
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia);
     }
 
     header {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 5px rgba(184, 134, 11, 0.3); /* Sombra com dourado escuro */
+      box-shadow: 0 2px 5px rgba(233, 30, 99, 0.3); /* Sombra com rosa fúcsia */
     }
 
-    /* Logo com letra R estilizada em dourado */
+    /* Logo estilizado em Playfair Display com rosa fúcsia */
     .logo {
+      font-family: 'Playfair Display', serif; /* Títulos: Playfair para elegância feminina */
       font-weight: 900;
       font-size: 2rem;
-      font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
       letter-spacing: 0.1em;
       position: relative;
-      color: var(--dourado-metalico); /* Dourado metálico para elegância */
+      color: var(--rosa-fucsia); /* Rosa fúcsia para destaque */
       cursor: default;
       user-select: none;
     }
 
-    /* Linha de movimento no R com degradê dourado */
+    /* Sublinhado sutil em rosa claro */
     .logo::after {
       content: '';
       position: absolute;
-      top: 0.3rem;
-      left: 1.6rem;
-      width: 1.2rem;
-      height: 0.15rem;
-      background: linear-gradient(90deg, transparent, var(--dourado-escuro), transparent);
-      transform: skew(-20deg);
+      bottom: -0.2rem;
+      left: 0;
+      width: 100%;
+      height: 0.2rem;
+      background: linear-gradient(90deg, transparent, var(--rosa-claro), transparent);
       border-radius: 2px;
     }
 
@@ -84,6 +87,7 @@
     }
 
     nav ul li a {
+      font-family: 'Raleway', sans-serif; /* Nav: Raleway para classe e clean */
       font-weight: 700;
       font-size: 1rem;
       padding: 0.25rem 0;
@@ -93,8 +97,8 @@
 
     nav ul li a:hover,
     nav ul li a:focus {
-      border-bottom: 2px solid var(--dourado-metalico);
-      color: var(--dourado-metalico);
+      border-bottom: 2px solid var(--rosa-fucsia);
+      color: var(--rosa-fucsia);
     }
 
     /* Estilos para Páginas de Detalhes */
@@ -107,10 +111,10 @@
     }
 
     .car-detail-container {
-      background: var(--cinza-grafite); /* Fundo cinza grafite para consistência */
+      background: var(--cinza-medio); /* Fundo cinza médio para apoio */
       border-radius: 8px;
       padding: 2rem;
-      box-shadow: 0 2px 10px rgba(184, 134, 11, 0.2); /* Sombra com dourado escuro */
+      box-shadow: 0 2px 10px rgba(233, 30, 99, 0.2); /* Sombra com rosa fúcsia */
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
@@ -122,7 +126,8 @@
       max-width: 400px;
       border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0 2px 8px rgba(184, 134, 11, 0.15); /* Sombra sutil com dourado */
+      box-shadow: 0 2px 8px rgba(233, 30, 99, 0.15); /* Sombra sutil com rosa fúcsia */
+      border: 2px solid var(--rosa-claro); /* Borda sutil em rosa claro */
     }
 
     .car-detail-container .car-info {
@@ -133,9 +138,10 @@
     }
 
     .car-detail-container .car-info h1 {
+      font-family: 'Playfair Display', serif; /* Título em Playfair para impacto */
       font-size: 2rem;
       font-weight: 900;
-      color: var(--dourado-metalico); /* Título em dourado metálico */
+      color: var(--rosa-fucsia); /* Título em rosa fúcsia */
       margin-bottom: 1rem;
     }
 
@@ -143,18 +149,20 @@
       margin-bottom: 0.75rem;
       font-size: 1rem;
       color: var(--branco); /* Textos em branco para legibilidade */
+      font-family: 'Montserrat', sans-serif;
     }
 
     .car-detail-container .car-price {
+      font-family: 'Raleway', sans-serif; /* Preço em Raleway para modernidade */
       font-size: 1.5rem;
       font-weight: 900;
-      color: var(--dourado-metalico); /* Preço em dourado metálico */
+      color: var(--rosa-fucsia); /* Preço em rosa fúcsia */
       margin: 1rem 0;
     }
 
     .btn-back {
-      background: var(--dourado-metalico);
-      color: var(--preto-profundo); /* Texto preto no botão */
+      background: var(--rosa-fucsia); /* Botão em rosa fúcsia */
+      color: var(--branco); /* Texto branco para contraste */
       border: none;
       padding: 0.75rem 1.5rem;
       border-radius: 5px;
@@ -166,23 +174,25 @@
       transition: background-color 0.3s, box-shadow 0.3s;
       margin-top: 1rem;
       align-self: flex-start;
+      font-family: 'Raleway', sans-serif; /* Botão em Raleway */
     }
 
     .btn-back:hover, .btn-back:focus {
-      background: var(--dourado-escuro); /* Hover com dourado escuro */
-      box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+      background: var(--rosa-claro); /* Hover com rosa claro */
+      box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
       outline: none;
     }
 
     footer {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       text-align: center;
       padding: 1.5rem 2rem;
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 500;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
       margin-top: auto;
+      font-family: 'Montserrat', sans-serif; /* Footer em Montserrat */
     }
 
     /* Responsividade */
@@ -211,13 +221,13 @@
 </head>
 <body>
 <header>
-  <img src="imagens/ribeiro.jpg" width="200" height="100" alt="Logo Ribeiro Multimarcas" class="logo" />
+  <div class="logo">PRISCILA VEICULOS</div>
   <nav aria-label="Menu principal">
     <ul>
-      <li><a href="#inicio" tabindex="0">Início</a></li>
-      <li><a href="#carros" tabindex="0">Carros</a></li>
-      <li><a href="#" tabindex="0">Sobre</a></li>
-      <li><a href="#" tabindex="0">Contato</a></li>
+      <li><a href="index.html" tabindex="0">Início</a></li>
+      <li><a href="marcas.html" tabindex="0">Marcas</a></li>
+      <li><a href="sobre.html" tabindex="0">Sobre</a></li>
+      <li><a href="contato.html" tabindex="0">Contato</a></li>
     </ul>
   </nav>
 </header>
@@ -238,7 +248,7 @@
   </main>
 
   <footer>
-    &copy; 2024 Ribeiro Multimarcas. Todos os direitos reservados.
+    &copy; 2024 Priscila Veiculos. Todos os direitos reservados.
   </footer>
 </body>
 </html>

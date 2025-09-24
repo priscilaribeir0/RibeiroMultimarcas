@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marcas - Ribeiro Multimarcas</title>
+  <title>Marcas - Priscila Veículos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     /* Reset básico */
@@ -13,18 +16,18 @@
       box-sizing: border-box;
     }
 
-    /* Nova paleta de cores: Dourado + Preto */
+    /* Paleta de cores: Preto Absoluto + Rosa Fúcsia */
     :root {
-      --dourado-metalico: #FFD700;
-      --dourado-escuro: #B8860B;
-      --preto-profundo: #0A0A0A;
-      --cinza-grafite: #2E2E2E;
-      --branco: #FFFFFF;
+      --preto-absoluto: #000000;
+      --rosa-fucsia: #e91e63;
+      --rosa-claro: #f8bbd9;
+      --cinza-medio: #444444;
+      --branco: #ffffff;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--preto-profundo);
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       line-height: 1.6;
       min-height: 100vh;
@@ -35,28 +38,44 @@
     a {
       color: var(--branco);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
     a:hover {
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia);
     }
 
     header {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 5px rgba(184, 134, 11, 0.3);
-      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(233, 30, 99, 0.3);
     }
 
     .logo {
-      max-width: 200px;
-      height: auto;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+      position: relative;
+      color: var(--rosa-fucsia);
+      cursor: default;
+      user-select: none;
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -0.2rem;
+      left: 0;
+      width: 100%;
+      height: 0.2rem;
+      background: linear-gradient(90deg, transparent, var(--rosa-claro), transparent);
+      border-radius: 2px;
     }
 
     nav ul {
@@ -66,6 +85,7 @@
     }
 
     nav ul li a {
+      font-family: 'Raleway', sans-serif;
       font-weight: 700;
       font-size: 1rem;
       padding: 0.25rem 0;
@@ -75,23 +95,8 @@
 
     nav ul li a:hover,
     nav ul li a:focus {
-      border-bottom: 2px solid var(--dourado-metalico);
-      color: var(--dourado-metalico);
-    }
-
-    .horario-atendimento {
-      background-color: var(--cinza-grafite);
-      text-align: center;
-      padding: 0.5rem 0;
-      font-size: 0.9rem;
-      color: var(--branco);
-      width: 100%;
-      margin-top: 0.5rem;
-    }
-
-    .horario-atendimento i {
-      color: var(--dourado-metalico);
-      margin-right: 0.5rem;
+      border-bottom: 2px solid var(--rosa-fucsia);
+      color: var(--rosa-fucsia);
     }
 
     main {
@@ -103,142 +108,77 @@
     }
 
     .hero {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
-      padding: 4rem 2rem;
+      padding: 3rem 2rem;
       border-radius: 8px;
       text-align: center;
       margin-bottom: 3rem;
-      box-shadow: 0 4px 10px rgba(184, 134, 11, 0.5);
+      box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
     }
 
     .hero h1 {
+      font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       font-weight: 900;
       margin-bottom: 1rem;
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia);
     }
 
     .hero p {
+      font-family: 'Montserrat', sans-serif;
       font-size: 1.25rem;
       font-weight: 600;
       font-style: italic;
       letter-spacing: 0.05em;
-    }
-
-    /* Estilos específicos para a página de Marcas */
-    .filtro-marcas {
-      background-color: var(--cinza-grafite);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 10px rgba(184, 134, 11, 0.2);
-    }
-
-    .filtro-marcas h2 {
-      color: var(--dourado-metalico);
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .filtro-botoes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-    }
-
-    .btn-filtro {
-      background-color: var(--preto-profundo);
       color: var(--branco);
-      border: 2px solid var(--dourado-metalico);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.3s ease;
     }
 
-    .btn-filtro:hover,
-    .btn-filtro.ativo {
-      background-color: var(--dourado-metalico);
-      color: var(--preto-profundo);
-    }
-
-    .grid-marcas {
+    /* Estilos para a página de Marcas */
+    .marcas-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
     }
 
-    .card-marca {
-      background-color: var(--cinza-grafite);
+    .marca-card {
+      background-color: var(--cinza-medio);
       border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(184, 134, 11, 0.2);
+      padding: 2rem;
+      text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
     }
 
-    .card-marca:hover {
+    .marca-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
-    }
-
-    .marca-header {
-      background: linear-gradient(135deg, var(--preto-profundo), var(--cinza-grafite));
-      padding: 1.5rem;
-      text-align: center;
-      border-bottom: 3px solid var(--dourado-metalico);
+      box-shadow: 0 8px 20px rgba(233, 30, 99, 0.2);
     }
 
     .marca-logo {
-      width: 120px;
-      height: 80px;
+      width: 150px;
+      height: 100px;
       object-fit: contain;
-      margin: 0 auto;
+      margin-bottom: 1.5rem;
       filter: brightness(0) invert(1);
     }
 
-    .marca-header h3 {
-      color: var(--dourado-metalico);
+    .marca-card h2 {
+      font-family: 'Raleway', sans-serif;
       font-size: 1.5rem;
-      margin-top: 0.5rem;
-    }
-
-    .marca-info {
-      padding: 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .marca-descricao {
+      font-weight: 700;
+      color: var(--rosa-fucsia);
       margin-bottom: 1rem;
-      flex: 1;
     }
 
-    .marca-detalhes {
-      list-style: none;
-      margin-bottom: 1.5rem;
-    }
-
-    .marca-detalhes li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.5rem;
-    }
-
-    .marca-detalhes i {
-      color: var(--dourado-metalico);
-      margin-right: 0.5rem;
-      width: 20px;
-    }
-
-    .btn-ver-modelos {
-      background-color: var(--dourado-metalico);
-      color: var(--preto-profundo);
+    .btn-ver-carros {
+      background-color: var(--rosa-fucsia);
+      color: var(--branco);
       border: none;
       padding: 0.8rem 1.5rem;
       border-radius: 4px;
@@ -248,130 +188,22 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-top: auto;
-    }
-
-    .btn-ver-modelos:hover {
-      background-color: var(--dourado-escuro);
-    }
-
-    .destaque-marcas {
-      background-color: var(--cinza-grafite);
-      padding: 2rem;
-      border-radius: 8px;
-      margin-bottom: 3rem;
-    }
-
-    .destaque-marcas h2 {
-      color: var(--dourado-metalico);
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-    }
-
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .carousel-inner {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .carousel-item {
-      min-width: 100%;
-      padding: 1rem;
-    }
-
-    .carousel-modelo {
-      background-color: var(--preto-profundo);
-      border-radius: 8px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .carousel-modelo img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-
-    .carousel-modelo h4 {
-      color: var(--dourado-metalico);
-      margin-bottom: 0.5rem;
-    }
-
-    .carousel-controles {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
+      font-family: 'Raleway', sans-serif;
       margin-top: 1rem;
     }
 
-    .btn-carousel {
-      background-color: var(--dourado-metalico);
-      color: var(--preto-profundo);
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-carousel:hover {
-      background-color: var(--dourado-escuro);
-    }
-
-    .contador-marcas {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .contador-marcas p {
-      font-size: 1.1rem;
-    }
-
-    .contador-marcas span {
-      color: var(--dourado-metalico);
-      font-weight: bold;
-      font-size: 1.3rem;
+    .btn-ver-carros:hover {
+      background-color: var(--rosa-claro);
+      color: var(--preto-absoluto);
     }
 
     footer {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       text-align: center;
       padding: 2rem;
       margin-top: auto;
-    }
-
-    .whatsapp-btn {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: var(--branco);
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 1000;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: var(--dourado-metalico);
-      transform: scale(1.1);
+      font-family: 'Montserrat', sans-serif;
     }
 
     @media (max-width: 768px) {
@@ -394,24 +226,15 @@
         font-size: 1rem;
       }
 
-      .grid-marcas {
+      .marcas-container {
         grid-template-columns: 1fr;
-      }
-
-      .filtro-botoes {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .btn-filtro {
-        width: 200px;
       }
     }
   </style>
 </head>
 <body>
 <header>
-  <img src="imagens/ribeiro.jpg" width="200" height="100" alt="Logo Ribeiro Multimarcas" class="logo" />
+  <div class="logo">PRISCILA VEICULOS</div>
   <nav aria-label="Menu principal">
     <ul>
       <li><a href="index.html" tabindex="0">Início</a></li>
@@ -420,285 +243,48 @@
       <li><a href="contato.html" tabindex="0">Contato</a></li>
     </ul>
   </nav>
-  
-  <div class="horario-atendimento">
-    <p><i class="fas fa-clock"></i> Atendimento: Segunda a Sexta 08:00 - 18:00 | Sábado 09:00 - 15:00</p>
-  </div>
 </header>
 
 <main>
   <section class="hero">
     <h1>Nossas Marcas</h1>
-    <p>As melhores marcas automotivas em um só lugar</p>
+    <p>Conheça as marcas que trabalhamos</p>
   </section>
 
-  <div class="contador-marcas">
-    <p>Trabalhamos com <span>6</span> marcas de alta qualidade</p>
-  </div>
-
-  <section class="filtro-marcas">
-    <h2>Filtrar por Tipo</h2>
-    <div class="filtro-botoes">
-      <button class="btn-filtro ativo" data-filtro="todos">Todas as Marcas</button>
-      <button class="btn-filtro" data-filtro="nacional">Nacionais</button>
-      <button class="btn-filtro" data-filtro="importado">Importadas</button>
-      <button class="btn-filtro" data-filtro="luxo">Luxo</button>
+  <section class="marcas-container">
+    <!-- Fiat -->
+    <div class="marca-card">
+      <img src="imagens/fiat-logo.png" alt="Logo Fiat" class="marca-logo">
+      <h2>Fiat</h2>
+      <a href="fiat.html" class="btn-ver-carros">Ver Carros</a>
     </div>
-  </section>
 
-  <section class="grid-marcas">
     <!-- Volkswagen -->
-    <article class="card-marca" data-categoria="importado">
-      <div class="marca-header">
-        <img src="imagens/volkswagen-logo.png" alt="Volkswagen" class="marca-logo">
-        <h3>Volkswagen</h3>
-      </div>
-      <div class="marca-info">
-        <div class="marca-descricao">
-          <p>Marca alemã sinônimo de qualidade, durabilidade e tecnologia. Presente no Brasil desde 1953.</p>
-        </div>
-        <ul class="marca-detalhes">
-          <li><i class="fas fa-car"></i> <strong>Modelos em estoque:</strong> 12</li>
-          <li><i class="fas fa-star"></i> <strong>Destaque:</strong> Golf, Polo, Virtus</li>
-          <li><i class="fas fa-tag"></i> <strong>Faixa de preço:</strong> R$ 70.000 - R$ 250.000</li>
-        </ul>
-        <a href="volkswagen.html" class="btn-ver-modelos">Ver Modelos Volkswagen</a>
-      </div>
-    </article>
+    <div class="marca-card">
+      <img src="imagens/volkswagen-logo.png" alt="Logo Volkswagen" class="marca-logo">
+      <h2>Volkswagen</h2>
+      <a href="volkswagen.html" class="btn-ver-carros">Ver Carros</a>
+    </div>
 
     <!-- Honda -->
-    <article class="card-marca" data-categoria="importado">
-      <div class="marca-header">
-        <img src="imagens/honda-logo.png" alt="Honda" class="marca-logo">
-        <h3>Honda</h3>
-      </div>
-      <div class="marca-info">
-        <div class="marca-descricao">
-          <p>Tecnologia japonesa de ponta com conforto, eficiência e alto valor de revenda.</p>
-        </div>
-        <ul class="marca-detalhes">
-          <li><i class="fas fa-car"></i> <strong>Modelos em estoque:</strong> 15</li>
-          <li><i class="fas fa-star"></i> <strong>Destaque:</strong> Civic, HR-V, City</li>
-          <li><i class="fas fa-tag"></i> <strong>Faixa de preço:</strong> R$ 85.000 - R$ 280.000</li>
-        </ul>
-        <a href="honda.html" class="btn-ver-modelos">Ver Modelos Honda</a>
-      </div>
-    </article>
+    <div class="marca-card">
+      <img src="imagens/honda-logo.png" alt="Logo Honda" class="marca-logo">
+      <h2>Honda</h2>
+      <a href="honda.html" class="btn-ver-carros">Ver Carros</a>
+    </div>
 
     <!-- Toyota -->
-    <article class="card-marca" data-categoria="importado">
-      <div class="marca-header">
-        <img src="imagens/toyota-logo.png" alt="Toyota" class="marca-logo">
-        <h3>Toyota</h3>
-      </div>
-      <div class="marca-info">
-        <div class="marca-descricao">
-          <p>Líder em confiabilidade e tecnologia híbrida, oferecendo veículos duráveis e econômicos.</p>
-        </div>
-        <ul class="marca-detalhes">
-          <li><i class="fas fa-car"></i> <strong>Modelos em estoque:</strong> 10</li>
-          <li><i class="fas fa-star"></i> <strong>Destaque:</strong> Corolla, Hilux, SW4</li>
-          <li><i class="fas fa-tag"></i> <strong>Faixa de preço:</strong> R$ 95.000 - R$ 350.000</li>
-        </ul>
-        <a href="toyota.html" class="btn-ver-modelos">Ver Modelos Toyota</a>
-      </div>
-    </article>
-
-    <!-- Fiat -->
-    <article class="card-marca" data-categoria="nacional">
-      <div class="marca-header">
-        <img src="imagens/fiat-logo.png" alt="Fiat" class="marca-logo">
-        <h3>Fiat</h3>
-      </div>
-      <div class="marca-info">
-        <div class="marca-descricao">
-          <p>Líder de mercado no Brasil, conhecida por carros populares, econômicos e versáteis.</p>
-        </div>
-        <ul class="marca-detalhes">
-          <li><i class="fas fa-car"></i> <strong>Modelos em estoque:</strong> 18</li>
-          <li><i class="fas fa-star"></i> <strong>Destaque:</strong> Strada, Argo, Cronos</li>
-          <li><i class="fas fa-tag"></i> <strong>Faixa de preço:</strong> R$ 45.000 - R$ 120.000</li>
-        </ul>
-        <a href="fiat.html" class="btn-ver-modelos">Ver Modelos Fiat</a>
-      </div>
-    </article>
-
-    <!-- Hyundai -->
-    <article class="card-marca" data-categoria="importado">
-      <div class="marca-header">
-        <img src="imagens/hyundai-logo.png" alt="Hyundai" class="marca-logo">
-        <h3>Hyundai</h3>
-      </div>
-      <div class="marca-info">
-        <div class="marca-descricao">
-          <p>Design arrojado, tecnologia avançada e garantia extendida que conquistam o mercado.</p>
-        </div>
-        <ul class="marca-detalhes">
-          <li><i class="fas fa-car"></i> <strong>Modelos em estoque:</strong> 8</li>
-          <li><i class="fas fa-star"></i> <strong>Destaque:</strong> HB20, Creta, Tucson</li>
-          <li><i class="fas fa-tag"></i> <strong>Faixa de preço:</strong> R$ 65.000 - R$ 200.000</li>
-        </ul>
-        <a href="hyundai.html" class="btn-ver-modelos">Ver Modelos Hyundai</a>
-      </div>
-    </article>
-
-    <!-- Chevrolet -->
-    <article class="card-marca" data-categoria="nacional">
-      <div class="marca-header">
-        <img src="imagens/chevrolet-logo.png" alt="Chevrolet" class="marca-logo">
-        <h3>Chevrolet</h3>
-      </div>
-      <div class="marca-info">
-        <div class="marca-descricao">
-          <p>Tradição americana com DNA brasileiro, oferecendo robustez e confiabilidade.</p>
-        </div>
-        <ul class="marca-detalhes">
-          <li><i class="fas fa-car"></i> <strong>Modelos em estoque:</strong> 14</li>
-          <li><i class="fas fa-star"></i> <strong>Destaque:</strong> Onix, Tracker, S10</li>
-          <li><i class="fas fa-tag"></i> <strong>Faixa de preço:</strong> R$ 60.000 - R$ 280.000</li>
-        </ul>
-        <a href="chevrolet.html" class="btn-ver-modelos">Ver Modelos Chevrolet</a>
-      </div>
-    </article>
-  </section>
-
-  <section class="destaque-marcas">
-    <h2>Modelos em Destaque</h2>
-    <div class="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <div class="carousel-modelo">
-            <img src="imagens/Golf.jpg" alt="Volkswagen Golf">
-            <h4>Volkswagen Golf 2.0 TSI</h4>
-            <p>R$ 145.900</p>
-            <p>2023/2024 • 12.000 km</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="carousel-modelo">
-            <img src="imagens/Civic.jpeg" alt="Honda Civic">
-            <h4>Honda Civic Touring 1.5 Turbo</h4>
-            <p>R$ 125.800</p>
-            <p>2022/2022 • 25.000 km</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="carousel-modelo">
-            <img src="imagens/Corolla.jpeg" alt="Toyota Corolla">
-            <h4>Toyota Corolla Altis Hybrid</h4>
-            <p>R$ 168.500</p>
-            <p>2023/2023 • 8.000 km</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-controles">
-        <button class="btn-carousel prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="btn-carousel next"><i class="fas fa-chevron-right"></i></button>
-      </div>
+    <div class="marca-card">
+      <img src="imagens/toyota-logo.png" alt="Logo Toyota" class="marca-logo">
+      <h2>Toyota</h2>
+      <a href="toyota.html" class="btn-ver-carros">Ver Carros</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Ribeiro Multimarcas. Todos os direitos reservados.</p>
+  <p>&copy; 2024 Priscila Veiculos. Todos os direitos reservados.</p>
   <p>CNPJ: 12.345.678/0001-90</p>
 </footer>
-
-<a href="https://wa.me/5511999999999?text=Olá! Gostaria de informações sobre as marcas disponíveis na Ribeiro Multimarcas." 
-   class="whatsapp-btn" 
-   target="_blank" 
-   aria-label="Fale conosco pelo WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Adicionar classe active ao menu atual
-    const currentPage = window.location.pathname.split('/').pop();
-    document.querySelectorAll('nav a').forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.style.color = 'var(--dourado-metalico)';
-            link.style.borderBottom = '2px solid var(--dourado-metalico)';
-        }
-    });
-
-    // Filtro de marcas
-    const botoesFiltro = document.querySelectorAll('.btn-filtro');
-    const cardsMarcas = document.querySelectorAll('.card-marca');
-
-    botoesFiltro.forEach(botao => {
-        botao.addEventListener('click', function() {
-            // Remove classe ativo de todos os botões
-            botoesFiltro.forEach(btn => btn.classList.remove('ativo'));
-            // Adiciona classe ativo ao botão clicado
-            this.classList.add('ativo');
-            
-            const filtro = this.getAttribute('data-filtro');
-            
-            cardsMarcas.forEach(card => {
-                if (filtro === 'todos') {
-                    card.style.display = 'flex';
-                } else {
-                    if (card.getAttribute('data-categoria') === filtro) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }
-            });
-        });
-    });
-
-    // Carousel de modelos em destaque
-    const carouselInner = document.querySelector('.carousel-inner');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const btnPrev = document.querySelector('.btn-carousel.prev');
-    const btnNext = document.querySelector('.btn-carousel.next');
-    let currentIndex = 0;
-
-    function updateCarousel() {
-        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    btnNext.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        updateCarousel();
-    });
-
-    btnPrev.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-        updateCarousel();
-    });
-
-    // Auto-rotate do carousel
-    setInterval(function() {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        updateCarousel();
-    }, 5000);
-
-    // Animação de entrada para os cards
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Aplicar animação aos elementos
-    document.querySelectorAll('.card-marca').forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(el);
-    });
-});
-</script>
 </body>
 </html>

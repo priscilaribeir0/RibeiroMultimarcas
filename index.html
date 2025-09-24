@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ribeiro Multimarcas - Seu carro novo está aqui</title>
+  <title>Priscila Veiculos - Seu carro novo está aqui</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     /* Reset básico */
@@ -13,18 +16,18 @@
       box-sizing: border-box;
     }
 
-    /* Nova paleta de cores: Dourado + Preto */
+    /* Nova paleta de cores: Preto Absoluto + Rosa Fúcsia */
     :root {
-      --dourado-metalico: #FFD700;
-      --dourado-escuro: #B8860B;
-      --preto-profundo: #0A0A0A;
-      --cinza-grafite: #2E2E2E;
-      --branco: #FFFFFF;
+      --preto-absoluto: #000000;
+      --rosa-fucsia: #e91e63;
+      --rosa-claro: #f8bbd9;
+      --cinza-medio: #444444;
+      --branco: #ffffff;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--preto-profundo);
+      font-family: 'Montserrat', sans-serif; /* Corpo: Montserrat para modernidade e legibilidade */
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       line-height: 1.6;
       min-height: 100vh;
@@ -35,22 +38,22 @@
     a {
       color: var(--branco);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500; /* Ajustado para Montserrat */
       transition: color 0.3s ease;
     }
 
     a:hover {
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia);
     }
 
     header {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 5px rgba(184, 134, 11, 0.3);
+      box-shadow: 0 2px 5px rgba(233, 30, 99, 0.3); /* Sombra com rosa fúcsia */
       flex-wrap: wrap;
     }
 
@@ -66,6 +69,7 @@
     }
 
     nav ul li a {
+      font-family: 'Raleway', sans-serif; /* Nav: Raleway para classe e clean */
       font-weight: 700;
       font-size: 1rem;
       padding: 0.25rem 0;
@@ -75,22 +79,23 @@
 
     nav ul li a:hover,
     nav ul li a:focus {
-      border-bottom: 2px solid var(--dourado-metalico);
-      color: var(--dourado-metalico);
+      border-bottom: 2px solid var(--rosa-fucsia);
+      color: var(--rosa-fucsia);
     }
 
     .horario-atendimento {
-      background-color: var(--cinza-grafite);
+      background-color: var(--rosa-claro); /* Fundo rosa claro para sutileza */
       text-align: center;
       padding: 0.5rem 0;
       font-size: 0.9rem;
-      color: var(--branco);
+      color: var(--preto-absoluto); /* Texto escuro no fundo claro para contraste */
       width: 100%;
       margin-top: 0.5rem;
+      font-family: 'Montserrat', sans-serif;
     }
 
     .horario-atendimento i {
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia); /* Ícone em rosa fúcsia */
       margin-right: 0.5rem;
     }
 
@@ -103,27 +108,30 @@
     }
 
     .hero {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       padding: 4rem 2rem;
       border-radius: 8px;
       text-align: center;
       margin-bottom: 3rem;
-      box-shadow: 0 4px 10px rgba(184, 134, 11, 0.5);
+      box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3); /* Sombra com rosa fúcsia */
     }
 
     .hero h1 {
+      font-family: 'Playfair Display', serif; /* Títulos: Playfair para elegância e feminilidade */
       font-size: 2.5rem;
       font-weight: 900;
       margin-bottom: 1rem;
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia); /* Título em rosa fúcsia */
     }
 
     .hero p {
+      font-family: 'Montserrat', sans-serif; /* Parágrafo em Montserrat */
       font-size: 1.25rem;
       font-weight: 600;
       font-style: italic;
       letter-spacing: 0.05em;
+      color: var(--branco);
     }
 
     .car-list {
@@ -133,9 +141,9 @@
     }
 
     .car-card {
-      background-color: var(--cinza-grafite);
+      background-color: var(--cinza-medio); /* Fundo cinza médio para apoio */
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(184, 134, 11, 0.1);
+      box-shadow: 0 2px 8px rgba(233, 30, 99, 0.1); /* Sombra sutil com rosa fúcsia */
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -144,14 +152,14 @@
 
     .car-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(233, 30, 99, 0.2); /* Hover com rosa fúcsia */
     }
 
     .car-image {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto); /* Fundo preto absoluto para imagens */
     }
 
     .car-info {
@@ -162,13 +170,15 @@
     }
 
     .car-info h3 {
+      font-family: 'Raleway', sans-serif; /* Títulos de cards: Raleway para modernidade */
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia); /* Títulos em rosa fúcsia */
     }
 
     .car-details {
+      font-family: 'Montserrat', sans-serif; /* Detalhes em Montserrat */
       font-size: 0.9rem;
       color: var(--branco);
       margin-bottom: 1rem;
@@ -176,15 +186,16 @@
     }
 
     .car-price {
+      font-family: 'Playfair Display', serif; /* Preços em Playfair para impacto */
       font-size: 1.3rem;
       font-weight: 900;
-      color: var(--dourado-metalico);
+      color: var(--rosa-fucsia); /* Preços em rosa fúcsia */
       margin-bottom: 1rem;
     }
 
     .btn-details {
-      background-color: var(--dourado-metalico);
-      color: var(--preto-profundo);
+      background-color: var(--rosa-fucsia); /* Botões em rosa fúcsia */
+      color: var(--branco); /* Texto branco para contraste */
       border: none;
       padding: 0.8rem 1.5rem;
       border-radius: 4px;
@@ -195,18 +206,20 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       display: inline-block;
+      font-family: 'Raleway', sans-serif; /* Botões em Raleway */
     }
 
     .btn-details:hover {
-      background-color: var(--dourado-escuro);
+      background-color: var(--rosa-claro); /* Hover em rosa claro para sutileza */
     }
 
     footer {
-      background-color: var(--preto-profundo);
+      background-color: var(--preto-absoluto);
       color: var(--branco);
       text-align: center;
       padding: 2rem;
       margin-top: auto;
+      font-family: 'Montserrat', sans-serif; /* Footer em Montserrat */
     }
 
     .whatsapp-btn {
@@ -229,7 +242,7 @@
     }
 
     .whatsapp-btn:hover {
-      background-color: var(--dourado-metalico);
+      background-color: var(--rosa-fucsia); /* Hover em rosa fúcsia para consistência */
       transform: scale(1.1);
     }
 
@@ -261,7 +274,7 @@
 </head>
 <body>
 <header>
-  <img src="imagens/ribeiro.jpg" width="200" height="100" alt="Logo Ribeiro Multimarcas" class="logo" />
+  <img src="imagens/priscila.jpg" width="200" height="100" alt="Logo Priscila Veiculos" class="logo" />
   <nav aria-label="Menu principal">
     <ul>
       <li><a href="index.html" tabindex="0">Início</a></li>
@@ -278,7 +291,7 @@
 
 <main>
   <section class="hero">
-    <h1>Ribeiro Multimarcas</h1>
+    <h1>Priscila Veiculos</h1>
     <p>Seu carro novo está aqui</p>
   </section>
 
@@ -346,11 +359,11 @@
 </main>
 
 <footer>
-  <p>&copy; 2024 Ribeiro Multimarcas. Todos os direitos reservados.</p>
+  <p>&copy; 2024 Priscila Veiculos. Todos os direitos reservados.</p>
   <p>CNPJ: 12.345.678/0001-90</p>
 </footer>
 
-<a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os veículos da Ribeiro Multimarcas." 
+<a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os veículos da Priscila Veiculos." 
    class="whatsapp-btn" 
    target="_blank" 
    aria-label="Fale conosco pelo WhatsApp">
@@ -377,8 +390,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop();
     document.querySelectorAll('nav a').forEach(link => {
         if (link.getAttribute('href') === currentPage) {
-            link.style.color = 'var(--dourado-metalico)';
-            link.style.borderBottom = '2px solid var(--dourado-metalico)';
+            link.style.color = 'var(--rosa-fucsia)';
+            link.style.borderBottom = '2px solid var(--rosa-fucsia)';
         }
     });
 });
